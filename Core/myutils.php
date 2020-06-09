@@ -704,3 +704,21 @@ function getrequestvar($varname)
         return null;
     }
 }
+
+function getarrayvalue($arr,$idx)
+{
+  if (!is_array($arr)) 
+  {  
+     adddebug("Not an array $arr<br>");
+     return -1;
+  }
+  
+   if (array_key_exists($idx, $arr)) 
+   {
+     return   $arr[$idx];
+   }
+   else 
+   {
+     return 0;
+   } 
+}
