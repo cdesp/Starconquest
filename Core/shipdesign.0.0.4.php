@@ -281,6 +281,7 @@ function getupginfo($currow, $upg)
     $gold = getformatednumber($currow['ngold']);
     $metalum = getformatednumber($currow['nmetalum']);
     $tritium = getformatednumber($currow['ntritium']);
+    
 
     $cont = "
 				<div class='otherinfo'>
@@ -300,16 +301,16 @@ function getupginfo($currow, $upg)
         case 'hull':
             $cont .= "
   				   <label>Armor:</label>
-				   <label name='" . $upg . "sellblarmor'>" . $currow['armor'] . "</label><br>
+				   <label name='" . $upg . "sellblarmor'>" . getarrayvalue($currow,'armor') . "</label><br>
 			  			";
             break;
         case 'prop':
 
-            $speed = calculatespeed($currow['power'], $_SESSION['maxsize']);
+            $speed = calculatespeed(getarrayvalue($currow,'power'), getsessionvar('maxsize'));
 
             $cont .= "
   				   <label>Power:</label>
-				   <label name='" . $upg . "sellblpower'>" . $currow['power'] . "</label><br>
+				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow,'power') . "</label><br>
   				   <label>Speed:</label>
 				   <label name='" . $upg . "sellblspeed'>" . $speed . "</label><br>
 				   
@@ -319,21 +320,21 @@ function getupginfo($currow, $upg)
         case 'comp':
             $cont .= "
   				   <label>Accuracy:</label>
-				   <label name='" . $upg . "sellblaccuracy'>" . $currow['accuracy'] . "</label><br>
+				   <label name='" . $upg . "sellblaccuracy'>" . getarrayvalue($currow,'accuracy') . "</label><br>
 			  			";
 
             break;
         case 'sensor':
             $cont .= "
   				   <label>Distance:</label>
-				   <label name='" . $upg . "sellbldistance'>" . $currow['distance'] . "</label><br>
+				   <label name='" . $upg . "sellbldistance'>" .getarrayvalue($currow,'distance') . "</label><br>
 			  			";
 
             break;
         case 'shield':
             $cont .= "
   				   <label>Power:</label>
-				   <label name='" . $upg . "sellblpower'>" . $currow['power'] . "</label><br>
+				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow,'power') . "</label><br>
 			  			";
 
             break;
@@ -349,9 +350,9 @@ function getupginfo($currow, $upg)
             }
             $cont .= "
   				   <label>Distance:</label>
-				   <label name='" . $upg . "sellblwdist'>" . $currow['weapondist'] . "</label><br>
+				   <label name='" . $upg . "sellblwdist'>" . getarrayvalue($currow,'weapondist') . "</label><br>
   				   <label>Damage:</label>
-				   <label name='" . $upg . "sellblwdamg'>" . $currow['weapondmg'] . "</label><br>				   
+				   <label name='" . $upg . "sellblwdamg'>" . getarrayvalue($currow,'weapondmg') . "</label><br>				   
 			  			";
             break;
     }
@@ -430,16 +431,16 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
 
             $tabcontent .= getupginfo($sel, 'comp');
             $tabcontent .= '</div>';
-            if (myisset($sel['size'])) {
+            if (isset($sel['size'])) {
                 $totsize += $sel['size'];
             }
-            if (myisset($sel['ngold'])) {
+            if (isset($sel['ngold'])) {
                 $totgold += $sel['ngold'];
             }
-            if (myisset($sel['nmetalum'])) {
+            if (isset($sel['nmetalum'])) {
                 $totmetalum += $sel['nmetalum'];
             }
-            if (myisset($sel['ntritium'])) {
+            if (isset($sel['ntritium'])) {
                 $tottritium += $sel['ntritium'];
             }
         }
@@ -467,16 +468,16 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
 
             $tabcontent .= getupginfo($sel, 'prop');
             $tabcontent .= '</div>';
-            if (myisset($sel['size'])) {
+            if (isset($sel['size'])) {
                 $totsize += $sel['size'];
             }
-            if (myisset($sel['ngold'])) {
+            if (isset($sel['ngold'])) {
                 $totgold += $sel['ngold'];
             }
-            if (myisset($sel['nmetalum'])) {
+            if (isset($sel['nmetalum'])) {
                 $totmetalum += $sel['nmetalum'];
             }
-            if (myisset($sel['ntritium'])) {
+            if (isset($sel['ntritium'])) {
                 $tottritium += $sel['ntritium'];
             }
         }
@@ -502,16 +503,16 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
             );
             $tabcontent .= getupginfo($sel, 'sensor');
             $tabcontent .= '</div>';
-            if (myisset($sel['size'])) {
+            if (isset($sel['size'])) {
                 $totsize += $sel['size'];
             }
-            if (myisset($sel['ngold'])) {
+            if (isset($sel['ngold'])) {
                 $totgold += $sel['ngold'];
             }
-            if (myisset($sel['nmetalum'])) {
+            if (isset($sel['nmetalum'])) {
                 $totmetalum += $sel['nmetalum'];
             }
-            if (myisset($sel['ntritium'])) {
+            if (isset($sel['ntritium'])) {
                 $tottritium += $sel['ntritium'];
             }
         }
@@ -538,16 +539,16 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
 
             $tabcontent .= getupginfo($sel, 'shield');
             $tabcontent .= '</div>';
-            if (myisset($sel['size'])) {
+            if (isset($sel['size'])) {
                 $totsize += $sel['size'];
             }
-            if (myisset($sel['ngold'])) {
+            if (isset($sel['ngold'])) {
                 $totgold += $sel['ngold'];
             }
-            if (myisset($sel['nmetalum'])) {
+            if (isset($sel['nmetalum'])) {
                 $totmetalum += $sel['nmetalum'];
             }
-            if (myisset($sel['ntritium'])) {
+            if (isset($sel['ntritium'])) {
                 $tottritium += $sel['ntritium'];
             }
         }
@@ -579,16 +580,16 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
 
             $tabcontent .= getupginfo($sel, 'weapon1');
             $tabcontent .= '</div>';
-            if (myisset($sel['size'])) {
+            if (isset($sel['size'])) {
                 $totsize += $sel['size'];
             }
-            if (myisset($sel['ngold'])) {
+            if (isset($sel['ngold'])) {
                 $totgold += $sel['ngold'];
             }
-            if (myisset($sel['nmetalum'])) {
+            if (isset($sel['nmetalum'])) {
                 $totmetalum += $sel['nmetalum'];
             }
-            if (myisset($sel['ntritium'])) {
+            if (isset($sel['ntritium'])) {
                 $tottritium += $sel['ntritium'];
             }
         }

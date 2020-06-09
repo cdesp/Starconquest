@@ -57,7 +57,7 @@
       
       
       echo json_encode($retarr);
-  } elseif (myisset($inpspeed)) {
+  } elseif (myisset(filter_input(INPUT_GET, 'speed'))) {
       $size=  filter_input(INPUT_GET, 'size');
       $power= filter_input(INPUT_GET, 'power');
       $retarr['speed']=calculatespeed($power, $size);
