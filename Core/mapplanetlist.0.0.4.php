@@ -31,119 +31,33 @@
 		  </div>	
 			
 		";
-
-        //if ($infotp==1)
-          
+        
         $tmppl= "
-				 <div class='listheader'>
-                                    $tmppl
-				 </div>		  					
-		   ";
-        /*else
-          $tmppl="
                  <div class='listheader'>
-                                       $tmppl
-                 </div>
-          ";*/
-             
+                    $tmppl
+                 </div>		  					
+	";
              
         $tmppl.="<div class='planlist myscroller '>";
         
-        $tmpst=" 
-				.infoimages
-				{
-				  position:absolute;
-				  left:5;
-				  top:2;	
-				  width:52;
-				  height:24;	
-				  #background-color:red;                                  
-				}
-				.infoimg1
-				{
-				  position:relative;
-				  left:0;
-				  top:0;
-				  width:24;
-				  height:24;
-				}
-				.infoimg2
-				{
-				  position:relative;
-				  left:3;
-  				  top:0;
-				  width:24;
-				  height:24;
-				}		
-				.planlist
-				{
-   				   position: absolute;
-  				    display: block;
- 				    z-index: 1;
-                                    top: 30px;
-  				    left: 0px;	
-                                    width:500;
-                                    height:530px;
-				 // background-color:#6495ED;
-                                    overflow:auto;
-				}
-				.listheader
-				{
-   				   position: absolute;
-                                   top:0px;	
-                                   left:8px;
-                                   width:480px;
-                                   height:30px;
-                                   background-image: url('Images/planetlistheader.png');
-				}
-				.lhd1
-				{
-					position: absolute;
- 		  		   font-family:arial;color:black;font-size:20px;	
-		           display:block;
-		           text-align:center;
-				   left:85;
-				   top:2px;
-				}
-				.lhd2
-				{
-					position: absolute;
- 		  		   font-family:arial;color:white;font-size:20px;	
-		           display:block;
-		           text-align:center;
-				   left:190;					
-				   top:2px;
-				}
-				.lhd3
-				{
-					position: absolute;
- 		  		   font-family:arial;color:#666633;font-size:20px;	
-		           display:block;
-		           text-align:center;
-				   left:320;					
-				   top:2px;
-				}
-				
+        $tmpst=" 				
 		";
-        
-        
-        
-        $bgcol1='#9bbbd0';//Selected
-        $bgcol2='#9bbbd0';//not selected
+        //$bgcol1='#9bbbd0';//Selected
+        //$bgcol2='#9bbbd0';//not selected
         
         for ($i=0;$i<$reccnt;$i++) {
             $dbarray=query_fetch_array($dbres);
             if ($dbarray==false) {
                 break;
             }
-            $pid=$dbarray['pid'];
-            $sclass="";
+            $pid=$dbarray['pid'];            
             $sid="planet_$pid";
             if ($selplanet==$pid) {
-                $bgcol=$bgcol1;
+                //$bgcol=$bgcol1;
                 $sclass="selplanet";
             } else {
-                $bgcol=$bgcol2;
+                //$bgcol=$bgcol2;
+                $sclass="";
             }
             if ($selplanet==$pid) {
                 $opac=1.0;
@@ -172,36 +86,36 @@
           
             if ($infotp==1) {
                 $tmppl=$tmppl. "
-							<div class='gold' >	
-							   <div class='hd4 myinset'>".$g." </div> 
-                                                           <div class='hd41 tooltip myinset'>
-                                                             <span class='tooltiptext'> 
-                                                               per hour
-                                                             </span>
-                                                             $gp
-                                                            </div>     
-							</div>
-							<div class='metalum' >	
-							   <div class='hd4 myinset'>".$m." </div> 
-                                                           <div class='hd41 tooltip myinset'>
-                                                             <span class='tooltiptext'> 
-                                                               per hour
-                                                             </span>
-                                                             $mp
-                                                            </div>     
-							</div>
-							<div class='tritium' >	
-							   <div class='hd4 myinset'>".$t." </div> 
-                                                           <div class='hd41 tooltip myinset'>
-                                                             <span class='tooltiptext'> 
-                                                               per hour
-                                                             </span>
-                                                             $tp
-                                                            </div>     
+                    <div class='gold' >	
+                       <div class='hd4 myinset'>".$g." </div> 
+                       <div class='hd41 tooltip myinset'>
+                         <span class='tooltiptext'> 
+                           per hour
+                         </span>
+                         $gp
+                        </div>     
+                    </div>
+                    <div class='metalum' >	
+                       <div class='hd4 myinset'>".$m." </div> 
+                       <div class='hd41 tooltip myinset'>
+                         <span class='tooltiptext'> 
+                           per hour
+                         </span>
+                         $mp
+                        </div>     
+                    </div>
+                    <div class='tritium' >	
+                       <div class='hd4 myinset'>".$t." </div> 
+                       <div class='hd41 tooltip myinset'>
+                         <span class='tooltiptext'> 
+                           per hour
+                         </span>
+                         $tp
+                        </div>     
 
-							</div>
+                    </div>
 		
-					 ";
+	     ";
             } else {
                 if ($usrid!=null) {
                     $qres=getshipsonplanet($pid, $usrid, $qrcnt);
@@ -230,7 +144,7 @@
                     for ($j=0;$j<$qrcnt;$j++) {
                         $qrows= query_fetch_array($qres);
                         $qrows=getshipinfo($qrows);
-                        $stid=$qrows['stid'];
+                       // $stid=$qrows['stid'];
                         $shpname=$qrows['stypename'];
                         $maxsize=getformatednumber($qrows['maxsize']);
                         $speed=$qrows['speed'];
@@ -271,73 +185,57 @@
             $tmpst=$tmpst."
 			.planetdiv_$pid
 			{
-   			  position: absolute;
-   			  display: block;
-                          z-index: 0;
                           top: ".$divtp."px;
-                          left: 2px;	
-	  		  width: 480px;
 	  		  height: ".$divheight."px;
-	 		  #background-color:$bgcol;
-	 		  #background-image: url('Images/planetlist.png');
 	 		  opacity:$opac;
 			}
 			";
         } //end for
 
-      
         $tmpst=$tmpst."
 	";
 
-        $jscript.="	
-					
-		
-					function checkbackground(){
-						var plinf=getAjaxSessionParam('planinfo');
-						console.log('PLANINFO='+plinf);
-						if (plinf==1){
-						 // $('.planetdiv').css('background-image', 'url(Images/planetlist.png)');
-                                                  $('.listheader').css('background-image', 'url(Images/planetlistheader.png)');
-                                                  
-                                                }
-						else {
-  						 // $('.planetdiv').css('background-image', 'url(Images/planetfleetlist.png)');						
-                                                  $('.listheader').css('background-image', 'url(Images/fleetlistheader.png)');                                                  
-                                                }
-						
-					}
+        $jscript.="					
+            function checkbackground(){
+                    var plinf=getAjaxSessionParam('planinfo');
+                    console.log('PLANINFO='+plinf);
+                    if (plinf==1){
+                     // $('.planetdiv').css('background-image', 'url(Images/planetlist.png)');
+                      $('.listheader').css('background-image', 'url(Images/planetlistheader.png)');
 
+                    }
+                    else {
+                     // $('.planetdiv').css('background-image', 'url(Images/planetfleetlist.png)');						
+                      $('.listheader').css('background-image', 'url(Images/fleetlistheader.png)');                                                  
+                    }
 
-					function initform(){
-						if (selplanet>0)
-					     scrollToView('planet_'+selplanet);
-						checkbackground();
-					}
+            }
 
-					
-					function setplanetinfo(planinfo){
-						setAjaxSessionParam('planinfo',planinfo);												  
-						tabpressed(null,selectedTab);//reload tab						
-						checkbackground();
-					}
-					
-					function selectPlanet(pid){
-						//$('#planet_'+selplanet).css('background-color','".$bgcol1."');
-						$('#planet_'+selplanet).css('opacity','0.6');
-						setAjaxSessionParam('selplanet',pid);
-						selplanet=pid;
-						setAjaxSessionParam('action','planetcenter');
-						refreshMap();
-						//$('#planet_'+pid).css('background-color','".$bgcol2."');
-						$('#planet_'+pid).css('opacity','1.0');
-						//tabpressed(null,selectedTab);//reload tab
+            function initform(){
+                    if (selplanet>0)
+                 scrollToView('planet_'+selplanet);
+                    checkbackground();
+            }
 
-					}
-				";
+            function setplanetinfo(planinfo){
+                    setAjaxSessionParam('planinfo',planinfo);												  
+                    tabpressed(null,selectedTab);//reload tab						
+                    checkbackground();
+            }
 
-
+            function selectPlanet(pid){
+                    //$('#planet_'+selplanet).css('background-color','".$bgcol1."');
+                    $('#planet_'+selplanet).css('opacity','0.6');
+                    setAjaxSessionParam('selplanet',pid);
+                    selplanet=pid;
+                    setAjaxSessionParam('action','planetcenter');
+                    refreshMap();
+                    //$('#planet_'+pid).css('background-color','".$bgcol2."');
+                    $('#planet_'+pid).css('opacity','1.0');
+                    //tabpressed(null,selectedTab);//reload tab
+            }
+	";
         $tmppl.="</div>";
-
         $plnout=$tmppl;
         $plnstl=$tmpst;
     }

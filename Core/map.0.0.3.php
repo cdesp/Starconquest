@@ -29,8 +29,6 @@ function doaction($act)
 //this is called by client through ajax return the tab info
 function mapinforequested($info)
 {
-    global $ssx, $ssy;
-
     //adddebug('getmap0<BR>');
     db_connect();
     activityoccur();
@@ -97,8 +95,6 @@ function mapinforequested($info)
 
 function mapmain()
 {
-    global $selplanet;
-
     adddebug('mapmain<BR>');
 
     $tabarr[0] = 'PLANETS';

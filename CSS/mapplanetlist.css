@@ -8,6 +8,14 @@ and open the template in the editor.
     Author     : cdesp
 */
 
+.planetdiv
+{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    left: 2px;	
+    width: 480px;
+}
 
 .planimg
 {
@@ -133,3 +141,77 @@ table.shipinfo td:nth-of-type(3) {width:10%;text-align:right;}/*Setting the widt
 table.shipinfo td:nth-of-type(4) {width:3%;text-align:right;}/*Setting the width of column 4.*/
 table.shipinfo td:nth-of-type(5) {width:3%;text-align:right;}/*Setting the width of column 5.*/		 				         table.shipinfo td:nth-of-type(6) {width:10%;text-align:right;}/*Setting the width of column 6.*/		 					
 
+
+
+.infoimages
+{
+    position:absolute;
+    left:5px;
+    top:2px;	
+    width:52px;
+    height:24px;	
+
+}
+.infoimg1
+{
+    position:relative;
+    left:0;
+    top:0;
+    width:24px;
+    height:24px;
+}
+.infoimg2
+{
+    position:relative;
+    left:3px;
+    top:0;
+    width:24px;
+    height:24px;
+}		
+.planlist
+{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 30px;
+    left: 0px;	
+    width:500px;
+    height:530px;    
+    overflow:auto;
+}
+.listheader
+{
+    position: absolute;
+    top:0px;	
+    left:8px;
+    width:480px;
+    height:30px;
+    background-image: url('Images/planetlistheader.png');
+}
+.lhd1
+{
+    position: absolute;
+    font-family:arial;color:black;font-size:20px;	
+    display:block;
+    text-align:center;
+    left:85px;
+    top:2px;
+}
+.lhd2
+{
+    position: absolute;
+    font-family:arial;color:white;font-size:20px;	
+    display:block;
+    text-align:center;
+    left:190px;					
+    top:2px;
+}
+.lhd3
+{
+    position: absolute;
+    font-family:arial;color:#666633;font-size:20px;	
+    display:block;
+    text-align:center;
+    left:320px;					
+    top:2px;
+}

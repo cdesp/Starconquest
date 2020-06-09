@@ -38,7 +38,7 @@ function getpulldown($upgspec, $caption, $upgid, $qres, $qrcnt, $fldupgid, $fldu
 {
     $isajax = $_SESSION['isajax'];
 
-    $label = 'lbl' . $upgspec;
+    //$label = 'lbl' . $upgspec;
     $upgidsel = $upgspec . 'sel';
 
 
@@ -281,7 +281,7 @@ function getupginfo($currow, $upg)
     $gold = getformatednumber($currow['ngold']);
     $metalum = getformatednumber($currow['nmetalum']);
     $tritium = getformatednumber($currow['ntritium']);
-    
+
 
     $cont = "
 				<div class='otherinfo'>
@@ -301,16 +301,16 @@ function getupginfo($currow, $upg)
         case 'hull':
             $cont .= "
   				   <label>Armor:</label>
-				   <label name='" . $upg . "sellblarmor'>" . getarrayvalue($currow,'armor') . "</label><br>
+				   <label name='" . $upg . "sellblarmor'>" . getarrayvalue($currow, 'armor') . "</label><br>
 			  			";
             break;
         case 'prop':
 
-            $speed = calculatespeed(getarrayvalue($currow,'power'), getsessionvar('maxsize'));
+            $speed = calculatespeed(getarrayvalue($currow, 'power'), getsessionvar('maxsize'));
 
             $cont .= "
   				   <label>Power:</label>
-				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow,'power') . "</label><br>
+				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow, 'power') . "</label><br>
   				   <label>Speed:</label>
 				   <label name='" . $upg . "sellblspeed'>" . $speed . "</label><br>
 				   
@@ -320,21 +320,21 @@ function getupginfo($currow, $upg)
         case 'comp':
             $cont .= "
   				   <label>Accuracy:</label>
-				   <label name='" . $upg . "sellblaccuracy'>" . getarrayvalue($currow,'accuracy') . "</label><br>
+				   <label name='" . $upg . "sellblaccuracy'>" . getarrayvalue($currow, 'accuracy') . "</label><br>
 			  			";
 
             break;
         case 'sensor':
             $cont .= "
   				   <label>Distance:</label>
-				   <label name='" . $upg . "sellbldistance'>" .getarrayvalue($currow,'distance') . "</label><br>
+				   <label name='" . $upg . "sellbldistance'>" . getarrayvalue($currow, 'distance') . "</label><br>
 			  			";
 
             break;
         case 'shield':
             $cont .= "
   				   <label>Power:</label>
-				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow,'power') . "</label><br>
+				   <label name='" . $upg . "sellblpower'>" . getarrayvalue($currow, 'power') . "</label><br>
 			  			";
 
             break;
@@ -350,9 +350,9 @@ function getupginfo($currow, $upg)
             }
             $cont .= "
   				   <label>Distance:</label>
-				   <label name='" . $upg . "sellblwdist'>" . getarrayvalue($currow,'weapondist') . "</label><br>
+				   <label name='" . $upg . "sellblwdist'>" . getarrayvalue($currow, 'weapondist') . "</label><br>
   				   <label>Damage:</label>
-				   <label name='" . $upg . "sellblwdamg'>" . getarrayvalue($currow,'weapondmg') . "</label><br>				   
+				   <label name='" . $upg . "sellblwdamg'>" . getarrayvalue($currow, 'weapondmg') . "</label><br>				   
 			  			";
             break;
     }
@@ -382,18 +382,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $qres = getAllShipHullsforUser($uid, $qrcnt);
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'hull',
-                'HULLS',
-                $dbarr['hullid'],
-                $qres,
-                $qrcnt,
+                    'hull',
+                    'HULLS',
+                    $dbarr['hullid'],
+                    $qres,
+                    $qrcnt,
                     'xhullid',
-                'hullname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'hullname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
             $tabcontent .= getupginfo($sel, 'hull');
             $tabcontent .= '</div>';
@@ -415,18 +415,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $qres = getAllShipComputersforUser($uid, $qrcnt);
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'comp',
-                'COMPUTERS',
-                $dbarr['computerid'],
-                $qres,
-                $qrcnt,
+                    'comp',
+                    'COMPUTERS',
+                    $dbarr['computerid'],
+                    $qres,
+                    $qrcnt,
                     'xcompid',
-                'compname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'compname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'comp');
@@ -452,18 +452,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $qres = getAllShipPropulsionsforUser($uid, $qrcnt);
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'prop',
-                'PROPULSION',
-                $dbarr['propulsionid'],
-                $qres,
-                $qrcnt,
+                    'prop',
+                    'PROPULSION',
+                    $dbarr['propulsionid'],
+                    $qres,
+                    $qrcnt,
                     'xpropid',
-                'propname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'propname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'prop');
@@ -488,18 +488,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $qres = getAllShipSensorsforUser($uid, $qrcnt);
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'sensor',
-                'SENSORS',
-                $dbarr['sensorid'],
-                $qres,
-                $qrcnt,
+                    'sensor',
+                    'SENSORS',
+                    $dbarr['sensorid'],
+                    $qres,
+                    $qrcnt,
                     'xsensid',
-                'sensname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'sensname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
             $tabcontent .= getupginfo($sel, 'sensor');
             $tabcontent .= '</div>';
@@ -523,18 +523,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $qres = getAllShipShieldsforUser($uid, $qrcnt);
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'shield',
-                'SHIELDS',
-                $dbarr['shieldid'],
-                $qres,
-                $qrcnt,
+                    'shield',
+                    'SHIELDS',
+                    $dbarr['shieldid'],
+                    $qres,
+                    $qrcnt,
                     'xshieldid',
-                'shieldname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'shieldname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'shield');
@@ -564,18 +564,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         $top = 0;
         if ($qres != null) {
             $tabcontent .= getpulldown(
-                'weapon1',
-                'WEAPON 1',
-                $dbarr['weapon1id'],
-                $qres,
-                $qrcnt,
+                    'weapon1',
+                    'WEAPON 1',
+                    $dbarr['weapon1id'],
+                    $qres,
+                    $qrcnt,
                     'xweaponid',
-                'weaponname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'weaponname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'weapon1');
@@ -601,18 +601,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         if ($qres != null) {
             $qres->data_seek(0);
             $tabcontent .= getpulldown(
-                'weapon2',
-                'WEAPON 2',
-                $dbarr['weapon2id'],
-                $qres,
-                $qrcnt,
+                    'weapon2',
+                    'WEAPON 2',
+                    $dbarr['weapon2id'],
+                    $qres,
+                    $qrcnt,
                     'xweaponid',
-                'weaponname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'weaponname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'weapon2');
@@ -637,18 +637,18 @@ function getshiptypeinfo(&$tabcontent, &$tabcontentstyle, $shiptpid, &$ajaxcode)
         if ($qres != null) {
             $qres->data_seek(0);
             $tabcontent .= getpulldown(
-                'weapon3',
-                'WEAPON 3',
-                $dbarr['weapon3id'],
-                $qres,
-                $qrcnt,
+                    'weapon3',
+                    'WEAPON 3',
+                    $dbarr['weapon3id'],
+                    $qres,
+                    $qrcnt,
                     'xweaponid',
-                'weaponname',
-                $left,
-                $top,
-                $sel,
-                $tabcontentstyle,
-                $ajaxcode
+                    'weaponname',
+                    $left,
+                    $top,
+                    $sel,
+                    $tabcontentstyle,
+                    $ajaxcode
             );
 
             $tabcontent .= getupginfo($sel, 'weapon3');

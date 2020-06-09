@@ -180,7 +180,8 @@ function cleargalaxy()
     $tblarr = array("planets", "world", "buildings", "fleets", "fleetships", "routes", "routeways", "ships", "shiptypes", "battlefleets",
         "battlefleetships", "battles", "messages", "techuser");
 
-    foreach ($tblarr as $i => $value) {
+    //foreach ($tblarr as $i => $value) {
+    foreach ($tblarr as $value) {
         $quer = "delete  from $value";
         $qres = query_exec($quer);
         echo $quer . "<BR>";

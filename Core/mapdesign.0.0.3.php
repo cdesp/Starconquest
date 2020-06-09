@@ -85,8 +85,6 @@ function docentertoplanet()
 
 function docentertofleet()
 {
-    $userid = $_SESSION['id'];
-
     if (myisset(getsessionvar('selfleet'))) {
         $selfleet = $_SESSION['selfleet'];
         centertofleet($selfleet);
@@ -97,7 +95,7 @@ function docentertofleet()
 /// New
 function getmap($isajax = false)
 {
-    global $galaxysize, $planetstr, $planetstyl, $stx, $sty;
+    global $galaxysize,  $stx, $sty;
 
     adddebug("getmap<BR>");
     if (myisset(filter_input(INPUT_GET, 'action')) and filter_input(INPUT_GET, 'action') == 'center') {
@@ -199,7 +197,7 @@ function addfleetsonmap(&$jscr)
 
 function addplanets(&$jscr)
 {
-    global $solsyssize, $stx, $sty; //$maparr,$dbmaparr;
+    global  $stx, $sty; //$maparr,$dbmaparr;
 
     getvisiblemap($stx, $sty, $sex, $sey);
 

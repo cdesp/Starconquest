@@ -40,7 +40,7 @@ function showplanetinfo(&$ajaxcode, $isajax = null)
     $planetmaxpop = $dbarr['maxpopulation'];
     $planetmaxpopstr = bd_nice_number($planetmaxpop, false);
     $maxpop = calcpeopleaccom($selplanet);
-    $maxpophint = getformatednumber($maxpop);
+   // $maxpophint = getformatednumber($maxpop);//detailed population
     $maxpopstr = bd_nice_number($maxpop);
     $planimg = $dbarr['imagename'] . "64";
 
