@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:06:36 μμ
+    Author     : cdesp
+*/
+
+/*getfleetlist*/
+
+.divfleet
+{
+    left:0;
+    width:99%;
+    position:absolute;  
+    background-image:url('/Images/allfleetlist.png');
+}
+
+.divfleet_sel
+{
+    background-image:url('/Images/allfleetlist_sel.png');
+}
+
+.ships
+{
+    left:112px;
+    top:24px;
+    width:380px;
+    height:60px;
+    /*background-color:#00C300;*/
+    overflow:auto;
+    position:absolute;        
+}
+.fname
+{
+    font-family:arial;
+    color:orange;
+    font-size:18px;
+    font-weight:bold;
+    width:90px;
+    height:68px; 	        
+    top:10px;
+    left:10px;
+    position:absolute;	
+    text-align:center;
+}		
+.maintit
+{
+    left:0;
+    width:507px;
+    height:35px;
+    text-align:left;
+    position: absolute;
+    font-family:arial;
+    color:white;
+    font-size:20px;	
+    font-weight:bold; 
+    background-image:url('/Images/allfleetlistheader.png');
+}
+.nooffleets
+{
+    left:24px;
+    top:6px;
+    position:absolute;
+}
+.allfleetlist
+{                   
+    /*background-image:url('/Images/allfleetlist.png');*/
+    height:90px;
+    width:495px;
+}
+.divfleetlist
+{
+    font-family:arial;
+    color:#CCCC00;
+    font-size:12px;	 	  
+    position: absolute;
+    display: block;      	
+    left:0px;	
+    top:38px;
+    width: 511px;
+    height: 530px;
+    overflow:auto;
+}
+.stitle
+{
+    font-family:arial;
+    color:#0000FF;
+    font-size:16px;	
+    font-weight:bold; 	    
+}
+.shipinfo
+{
+    font-family:arial;
+    color:greenyellow;
+    font-size:12px;	
+    font-weight:bold; 	    
+}
+.shipinfo th
+{
+    background-color:green;
+    color:white;
+}
+
+
+table.shipinfo {width:380px;left:2px;}/*Setting the table width is important!*/		  
+table.shipinfo td {overflow:hidden;padding:0 6px 0 0;}/*Hide text outside the cell.*/
+table.shipinfo td:nth-of-type(1) {width:110px;text-align:left;}/*Setting the width of column 1.*/
+table.shipinfo td:nth-of-type(2) {width:65px;text-align:right;}/*Setting the width of column 2.*/
+table.shipinfo td:nth-of-type(3) {width:65px;text-align:right;}/*Setting the width of column 3.*/
+table.shipinfo td:nth-of-type(4) {width:65px;text-align:right;}/*Setting the width of column 4.*/
+table.shipinfo td:nth-of-type(5) {width:65px;text-align:right;}/*Setting the width of column 5.*/		 				         
+/*table.shipinfo td:nth-of-type(6) {width:0px;text-align:right;}/*Setting the width of column 6.*/		 				  
+

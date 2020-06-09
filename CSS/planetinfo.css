@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 7:22:15 μμ
+    Author     : cdesp
+*/
+
+/*showplanetinfo*/
+
+.planetinfo
+{
+    left:0px;
+    top:0px;
+    width:374px;
+    height:130px;
+    position: absolute;
+    display: block;	
+    background-image:url('/Images/GenInfo.png');
+    background-color:cornflowerblue;
+    z-index: 10;   	
+    font-family:arial;color:white;
+    font-size:14px;	
+    text-align:left;
+}
+.plname
+{
+    left:8px;
+    position:absolute;
+    top:2px; 
+    width: 120px;
+}
+.plsize
+{
+    top:110px;
+    position:absolute; 
+    left:9px;
+    width:113px;
+    text-align:center;
+}		  
+.username
+{
+    position:absolute; 
+    top:22px;                    
+    left:9px;
+    width:113px;
+    text-align:center;
+}
+.planetimage{
+    position:absolute; 
+    top:43px;                    
+    left:8px;
+    width:114px;
+    height:84px;
+}
+.upplanimg{                  
+    position:absolute; 
+    top:2px;                    
+    left:22px;
+    width:64px;
+    height:64px;
+}                  
+.techpoints{
+    position:absolute;
+    left:162px;
+    top:9px;
+    width: 70px;                  
+    text-align:right;
+}
+.popno{
+    position:absolute;
+    left:162px;
+    top:34px;
+    width: 70px;                  
+    text-align:right;
+}
+.goldno{
+    left:162px;
+    position:absolute;
+    top:58px;
+    width: 70px;    
+    text-align:right;
+}
+.metalno{
+    left:162px;
+    position:absolute;
+    top:83px;
+    width: 70px;
+    text-align:right;
+}
+.tritno{
+    left:162px;
+    position:absolute;
+    top:107px;
+    width: 70px;                  
+    text-align:right;
+}                 
+.goldph{
+    left:238px;
+    position:absolute;
+    top:58px;
+    width: 36px;    
+    text-align:right;
+}
+.metalph{
+    left:238px;
+    position:absolute;
+    top:83px;
+    width: 36px;
+    text-align:right;
+}
+.tritph{
+    left:238px;
+    position:absolute;
+    top:107px;
+    width: 36px;                  
+    text-align:right;
+}                 
+.goldbnsph{
+    position:absolute;
+    left:278px;                     
+    top:58px;
+    width: 36px;    
+    text-align:right;
+}
+.metalbnsph{
+    position:absolute;
+    left:278px;
+    top:83px;
+    width: 36px;
+    text-align:right;
+}
+.tritbnsph{
+    position:absolute;
+    left:278px;
+    top:107px;
+    width: 36px;                  
+    text-align:right;
+}                 

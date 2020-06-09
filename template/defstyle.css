@@ -1,0 +1,333 @@
+
+body 
+{
+    background: black;
+    font-family:arial;
+    color:white;
+    font-size:12px;
+}
+a {text-decoration: none}
+A:link { color: aqua ; background: none }
+A:visited { color: aqua ; background: none }
+A:hover { color: yellow ; background: none }
+.main 
+{
+    position: relative;
+    top: 4px;
+    left: 0px;		
+    width: 1024px; 
+}
+
+.myemboss
+{
+    background-color:#3061ac;
+    width:95%;
+    height:95%;
+    padding-top:10px;
+    padding-left:10px;
+    border-radius: 10px;
+    box-shadow:
+        0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+        0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;        
+}
+
+.myinset
+{
+    background-color:#3783f7;
+    border-radius:10px;
+    padding: 8 7 8 7;
+    box-shadow:
+        0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+        0px 2px 2px 0px rgba(255, 255, 255, 0.5);    
+    width:calc(var(--webkit-fill-available) - 20px);
+}
+
+.myscroller
+{
+    position:absolute;
+    overflow:auto;
+}
+
+.myscroller::-webkit-scrollbar 
+{
+    width: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+} 
+.myscroller::-webkit-scrollbar-thumb 
+{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        color-stop(0.44, rgb(122,153,217)),
+        color-stop(0.72, rgb(73,125,189)),
+        color-stop(0.86, rgb(28,58,148)));
+}
+.myscroller:-webkit-scrollbar-track 
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+
+
+
+.mybox 
+{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border-width: 0px;
+    border-radius: 20px;
+    box-shadow: inset 0px -2px 1px rgba(0,0,0,0.8), inset 0 2px 1px rgba(255,255,255,1);
+    margin: 5px 5px;
+    background: linear-gradient(top, #3061ac, #3061ac);
+    background: -webkit-linear-gradient(top, #3061ac, #3061ac);
+    background: -moz-linear-gradient(top, #3061ac, #3061ac);
+    background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3061ac), color-stop(100%, #3061ac));      
+}
+
+.myboxin
+{
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-right:10px;
+    margin-left:5px;
+    border-radius:20px;
+    height:-webkit-fill-available;
+    width:-webkit-fill-available;
+    -webkit-box-shadow: inset 1px 1px 1px 0px rgba(17,50,100,0.75), inset -1px -1px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 1px 1px 1px 0px rgba(17,50,100,0.75), inset -1px -1px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.75), inset -1px -1px 1px 0px rgba(48,97,172,0.75);                 
+    background-color: #3061ac;                     
+}
+
+
+.myshadow
+{
+    box-shadow:0.2em 0.2em 0.7em black, inset 0 0 0.7em #3061ac;
+    padding: 5 5 5 5;
+    background-color: #3783f7;
+}
+
+
+.insetshadow1 
+{
+    -moz-box-shadow: inset 0 0 5px 3px #9d9d9d;
+    -webkit-box-shadow: inset 0 0 3px 5px #9d9d9d;
+    box-shadow: inset 0 0 5px 3px #9d9d9d;
+}
+
+.outershadow1 
+{
+    -moz-box-shadow: 0 0 5px 3px #9d9d9d;
+    -webkit-box-shadow: 0 0 3px 5px #9d9d9d;
+    box-shadow: 0 0 5px 3px #9d9d9d;
+}
+
+.nblur1 
+{
+    -moz-box-shadow: -5px -5px 0 #888;
+    -webkit-box-shadow: -5px -5px 0 #888;
+    box-shadow: -5px -5px 0 #888;
+}
+
+.backg 
+{
+    position: relative;
+    display: block;
+    z-index: -1;
+    top: 0px;
+    left: 0px;		
+}
+
+
+.mytopmenu
+{
+    width:130px;
+    height:130px;
+    position: absolute;
+    display: block;
+    z-index: 2;
+}
+
+.clickmenu
+{
+    cursor: pointer;
+}
+
+.menu4
+{
+    top: 0px;
+    left: 374px;
+}           
+.menu5
+{
+    top: 0px;
+    left: 504px;
+}
+.menu6
+{
+    top: 0px;
+    left: 634px;
+}
+.menu7
+{
+    top: 0px;
+    left: 764px;
+}
+.menu8
+{
+    top: 0px;
+    left: 894px;
+}
+
+.menuMap
+{    
+    background-image: url('../Images/Menu_Map.png');      
+}
+.menuMap:hover 
+{ 
+    background-image: url('../Images/Menu_Map_ovr.png');
+}    
+
+.menuBattle
+{    
+    background-image: url('../Images/Menu_Battle.png');  
+}
+.menuBattle:hover 
+{ 
+    background-image: url('../Images/Menu_Battle_ovr.png');
+}    
+
+.menuShipdesign
+{    
+    background-image: url('../Images/Menu_Fleet.png');  
+}
+.menuShipdesign:hover 
+{ 
+    background-image: url('../Images/Menu_Fleet_ovr.png');
+}    
+
+.menuTech
+{    
+    background-image: url('../Images/Menu_Tech.png');  
+}
+.menuTech:hover 
+{ 
+    background-image: url('../Images/Menu_Tech_ovr.png');
+}    
+
+.menuDiplomacy
+{    
+    background-image: url('../Images/Menu_Diplo.png');  
+}
+.menuDiplomacy:hover 
+{ 
+    background-image: url('../Images/Menu_Diplo_ovr.png');
+}    
+
+
+
+
+
+.debug
+{
+    position: absolute;
+    top: 50px;
+    left: 1050px;	
+    background-color:#0C9;
+    color:black;
+    font-size:12px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.divleftarea  
+{
+    position:absolute;
+    left:0;
+    top:160;    
+    height:640;  
+}
+
+.dlaplanet
+{
+    width:600;        
+}
+
+.dlamap
+{
+    width:510;        
+}
+
+.dladiplomacy
+{
+    width:510;        
+}
+
+.defmaintab
+{
+    position:relative;
+    left:2;
+    top:0;
+    width:500;
+    height:590;
+    overflow:hidden;
+}
+
+.tabset_in
+{
+    border-radius:0px 0px 10px 10px;
+}
+
+
+

@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 5:27:13 μμ
+    Author     : cdesp
+*/
+
+/*Planet queue tab 3*/
+.planqueuebuilt{
+    background-image: url('../Images/Planet_Queue_Ships.png');   
+    width:400px;
+    height:110px;   
+    left:0px;
+    position:absolute;          
+}
+
+.planqueuetit{
+    background-image: url('../Images/Planet_Queue_Ships_Title.png');   
+    width:417px;
+    height:35px;
+}
+
+.pqbtitle{
+    left:10px;
+    top:4px;
+    width:195px;
+    position:absolute;  
+    font-size: 22px;
+    font-weight: bolder;
+    text-align:center;     
+}
+
+.pqbquant{
+    left:338px;
+    top:62px;
+    width:52px;
+    height:37px;
+    position:absolute;    
+    text-align:right;               
+    font-size:22px;
+    padding: 7px 0;
+}
+
+.pqbtimes{
+    left:339px;
+    top:54px;
+    width:50px;
+    height:15px;
+    position:absolute;    
+    text-align:center;     
+}
+
+.pqbtime{
+    left:339px;
+    top:67px;
+    width:50px;
+    height:15px;
+    position:absolute;    
+    text-align:right;     
+}
+
+.pqbtimeleft{
+    position:absolute;
+    top:10;
+    left:270;
+    width:120;
+    text-align:right;
+    color:chartreuse;
+    font-size:14px;
+    font-weight: bold;
+}

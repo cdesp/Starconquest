@@ -1,0 +1,135 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 4:58:38 μμ
+    Author     : cdesp
+*/
+
+
+.planimg
+{
+    position: relative;
+    display: block;
+    z-index: 0;
+    top: 2px;
+    left: 6px;	
+    width: 48px;
+    height:48px;
+}
+.plnimgname
+{
+    position:absolute;
+    left:5px;
+    width:64px;
+    height:78px;
+    top:5px;
+}
+.plnname
+{
+    position: relative;
+    display: block;
+    z-index: 0;
+    top: 2px;
+    left: 0px;
+    width: 64px;
+    color:white;
+    font-size:12px;
+    font-weight: bold;
+    text-align:center;
+}
+.plnenter{
+    background-image:url('/Images/ButPlanetEnter.png');
+    position: relative;
+    top: 3px;
+    left: 0px;
+    width: 63px;
+    height: 18px;
+}        
+.plnenter:hover{
+    background-image:url('/Images/ButPlanetEnter_ovr.png');
+}
+.ships{
+    top:6px;
+    left:80px;
+    width:390px;
+    height:82px;
+    position:absolute;
+    overflow:auto;    
+}
+.hd3
+{
+    font-family:arial;color:darkgreen;font-size:20px;	
+    display:block;
+    text-align:center;
+}
+.hd4
+{
+    font-family:arial;color:white;font-size:16px;	
+    text-align:right;
+    font-weight: bold;
+    position: relative;
+    top:2px;
+    width:100px;
+    height:13px;
+    padding: 4 6 4 6;
+}
+.hd41
+{
+    font-family:arial;color:white;font-size:16px;	
+    font-weight: bold;
+    text-align:right;
+    position: relative;
+    top:10px;       
+    width:100px;
+    height:13px;
+    padding: 4 6 4 6;
+}                
+.gold
+{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 2px;
+    left: 94px;
+    width: 102px;		
+}
+.metalum
+{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 2px;
+    left: 212px;
+    width: 102px;		
+}
+.tritium
+{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 2px;
+    left: 331px;
+    width: 102px;		
+}
+.shipinfo
+{
+    font-family:arial;color:#0000FF;font-size:12px;	font-weight:bold; 	    
+}
+.shipinfo th
+{
+    background-color:green;
+    color:white;
+}
+
+
+table.shipinfo {width:365px;left:2px;}/*Setting the table width is important!*/		  
+table.shipinfo td {overflow:hidden;}/*Hide text outside the cell.*/
+table.shipinfo td:nth-of-type(1) {width:20%;text-align:left;}/*Setting the width of column 1.*/
+table.shipinfo td:nth-of-type(2) {width:10%;text-align:right;}/*Setting the width of column 2.*/
+table.shipinfo td:nth-of-type(3) {width:10%;text-align:right;}/*Setting the width of column 3.*/
+table.shipinfo td:nth-of-type(4) {width:3%;text-align:right;}/*Setting the width of column 4.*/
+table.shipinfo td:nth-of-type(5) {width:3%;text-align:right;}/*Setting the width of column 5.*/		 				         table.shipinfo td:nth-of-type(6) {width:10%;text-align:right;}/*Setting the width of column 6.*/		 					
+

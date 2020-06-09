@@ -1,0 +1,105 @@
+
+//Play the battle between 1 attack ship type and 1 defend ship type
+//possible outcomes
+//ATTACKER
+//1) all ships fired (so this type will fire if survived the defender attack)
+//2) some ships didn't fire (because the enemy was obliterated) so they should fire on the next ship type
+//DEFENDER
+//1) defender loses all ships
+//2) defender sustains damage but lives
+function dotheshipbattle
+
+
+//an attack fleet of shiptype attacks all the defender fleets(shiptype by shiptype)
+//in order to go to the next shiptype the current shiptype must be destroyed.
+//for each fleet in defense
+//get the ship types which survived
+//for each enemy ship type in fleet
+//if the attacker weapon distance can reach the ship type
+// then 
+//  get all defender shiptype info ();
+//	add (quantity,killed,damage,shipsnotfired(on previous attack))
+//  dotheshipbattle and as a result we have ships of this attack type that not fired
+// do the same for the next defend ship type.
+// and for the next defender fleet
+function attackenemyshipatrange
+
+
+//for each attacking shiptype in fleet
+//get all attacker ship type info
+//add quantity amd coords
+//and attack all enemy ships at range
+function doshipsattack
+
+
+//For each attacker fleet in battle
+//attack all the defenders fleets
+dothebattle
+
+
+//Gets all attacker fleets in battle
+//Gets all defender fleets in battle
+//Copy all fleets to newround
+//in new round 
+// dothebattle with attacker fleets attacking the defender fleets from previous round and record damages to this round
+// dothebattle with defender fleets attacking back the attacker fleets from previous round and record damages to this round
+//check if battle ended and set the time for next round 
+donextround
+
+
+Example1
+
+500 ST1 attack 300 ST1a
+
+Attacker attack result
+Defender loses 100 ST1a
+
+Defender attack result
+Attacker loses 75 ST1
+
+On Next Round
+Attacker will have 500-75 ST1
+Defender will have 300-100 ST1a
+
+Attacker attack result
+Defender loses 80 ST1a
+
+Defender attack result
+Attacker loses 50 ST1
+
+On Next Round
+Attacker will have 500-75-50 ST1
+Defender will have 300-100-80 ST1a
+
+
+Example2
+
+500 ST1 attack 20 ST1a
+
+Attacker attack result
+Defender loses 20 ST1a
+
+Attacker fired with 200 ST1 to completly defeat defender ST1a
+so that leaves 300 ST1 that can fire to another Ship type of defender
+
+300 ST1 attack 200 ST2a
+Attacker attack result
+Defender loses 50 ST2a
+
+Defender(ST1a) attack result
+Attacker loses 5 ST1
+
+On Next Round
+Attacker will have 500-5 ST1 (minus whatever else the defender destroyes during his attack)
+Defender will have 0 ST1a
+Defender will have 200-50 ST2a
+
+
+
+
+
+
+
+
+
+

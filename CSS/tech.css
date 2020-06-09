@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:57:36 μμ
+    Author     : cdesp
+*/
+
+/*techmain*/
+
+.techtabmain
+{
+    top:5;
+    width:990;
+    height:575;
+    overflow:auto;
+}
+
+/*init_page */
+
+.divtecharea
+{
+    position:absolute;
+    left:0;
+    top:128;
+    width:1024;
+    height:635;
+
+}

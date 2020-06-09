@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:43:31 μμ
+    Author     : cdesp
+*/
+
+/*showshipdesign */
+.shipdsnmain
+{
+    position:relative;
+    left:4px;
+    top:0;
+    width:1000;
+    height:565;
+    overflow:auto;
+}
+
+
+/*  showshipimage */
+.shipimg
+{
+    position:relative;
+    left:0px;
+    top:15px;   
+    width:230px;
+    height:180px;   
+}
+.upgimg
+{
+    position:absolute;
+    left:0px;
+    top:0px;   
+
+}	   
+/* getpulldown */
+.divupgsel
+{
+    position:absolute;
+    width:180px;
+    height:220px;
+    text-align:center;
+    /*background-color: darkblue;*/
+}
+.lblupgsel
+{
+    position:absolute;	
+    left:0;
+    top:0;	
+    width:100%;
+    font-family : monospace; 
+    font-size : 14pt;
+    text-align:center;
+    font-weight: bold;
+}
+.upgsel
+{
+    position:absolute;
+    left:10px;	
+    top:30px;
+    width:130px;
+}
+
+
+/*getshipdesign*/
+.shipdsgn{
+    background-image: url('/Images/shipbuild.png');
+    height:inherit;
+    width:992px;
+}
+
+
+/*getshipbuild2*/
+.labelno
+{
+
+    display:block; 
+    clear:left;		
+    text-align:right;	
+    color:white;
+    top:2px;
+    font-weight: bold;
+}
+.shipsel
+{
+    position:absolute;
+    left:05px;
+    top:257px;   
+    width:220px;
+    height:240px;
+}
+.shiptype
+{
+    position:relative;
+    left:00px;
+    top:0px;   
+    width:220px;
+    height:240px;
+    font-family : monospace; 
+    font-size : 12pt;
+
+}
+.shipupgs{
+    position:absolute;
+    overflow: auto;
+    left:235px;
+    top:12px;   
+    width:750px;
+    height:545px;								
+}
+.newship
+{
+    position:absolute;
+    left:240px;
+    top:500px;   
+    width:650px;
+    height:50px;
+
+}
+.otherinfo
+{
+    position:absolute;
+    text-align:left;
+    top:60px;
+    left:10px;
+    font-size:12px;
+    font-weight: bold;
+}                        
+.addonslbox{
+    width:160px;
+}                       
+.mybutt
+{
+    position:absolute;
+    left:109px;
+    top:508px;   
+    font-size:11px;
+}
+.mybutt2
+{
+    position:absolute;
+    left:5px;
+    top:250px;   
+    font-size:11px;
+}
+
+
+

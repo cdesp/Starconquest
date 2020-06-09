@@ -1,0 +1,219 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 5:34:04 μμ
+    Author     : cdesp
+*/
+
+.divbattlearea
+{
+    position:absolute;
+    left:0;
+    top:128px;
+    width:585px;
+    height:490px;
+}
+
+
+/* getbattlefinalreport*/
+.finbattle{                 
+    position:absolute;                 
+    padding-left:30px;
+    font-size:12px;   
+    height: auto;
+    width: 340px;
+}
+.myscr{
+    height: calc(100% - 20px);
+    width: calc(100% + 10px);
+    position:absolute;
+    overflow:auto; 
+}
+
+/*getbattlegrid*/
+
+.battleimg
+{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: -0px;
+    left: 00px;
+}
+
+
+/*getbattlelist*/
+
+.myemboss{
+    height:370px;  
+    width:calc(100% - 40px);
+}
+.batdiv
+{
+    width:calc(100% - 20px);
+    height:360px;
+    /*background-color:red;*/
+    overflow:auto;
+    position:absolute;
+}                                
+.batdivin
+{
+    position:absolute;
+    width:360px;
+    height:42px;
+    /*background-color:blue;*/
+}
+.batdivall{
+
+}
+.fname
+{
+    font-size:18px;
+}
+.time
+{
+    top:0px;
+    width:250px;
+
+}
+.clkbat
+{
+    cursor: pointer;
+}
+.fullreport
+{
+    position:absolute;
+    width:calc(100% - 40px);
+    height:192px;
+    top:385px;
+}
+
+/*getbattleround*/   
+
+.battleroundin
+{
+    position:relative;
+    top:0;
+}
+.shpnum
+{
+    position:absolute;
+    left:10px;
+    top:17px;
+    width:18px;
+    font-size:11px;
+    text-align:right;    
+}
+
+
+/**/   
+.roundcontrols
+{
+    position:absolute;
+    left:0;
+    height:55px;
+    width:585px;
+    /* background-color:	#EE5C42; */
+}
+.tape{
+    position:absolute;
+    top:-2px;
+    z-index:2;
+    width:28px;
+    height:28px;
+    cursor: pointer;
+    background-size:28px 28px;                                
+}                                
+
+.tpstr
+{				 
+    left:175px;
+    background-image: url('/Images/tp_str.png');
+}
+.tpstr:hover
+{
+    background-image: url('/Images/tp_str_ov.png');
+}
+.tppre
+{
+    left:200px;
+    background-image: url('/Images/tp_pre.png');
+}
+.tppre:hover
+{
+    background-image: url('/Images/tp_pre_ov.png');
+}                                  
+.tpnxt
+{
+    left:355px;
+    background-image: url('/Images/tp_nxt.png');
+}
+.tpnxt:hover
+{
+    background-image: url('/Images/tp_nxt_ov.png');
+}
+.tpend
+{
+    left:380px;
+    background-image: url('/Images/tp_end.png');
+}
+.tpend:hover
+{
+    background-image: url('/Images/tp_end_ov.png');
+}
+.movcmd
+{
+    left:140px;
+    background-image: url('/Images/batmovcmd.png');
+    width:28px;
+    height:28px;
+    background-size: 28px 28px;                                                                 
+}
+.movcmd:hover
+{
+    background-image: url('/Images/batmovcmd_ov.png');
+}
+.tpinfo
+{
+    position:absolute;
+    left:230px;
+    top:-5px;
+    width:110px;
+    height:14px;
+    font-size:16px;
+    font-weight: bold;
+    color:white;				 
+}
+.atkuser{
+    left:10px;
+}
+.defuser{                        
+    left:446px;
+}
+.alluser{
+    position:absolute;
+    top:-5px;                        
+    width:115px;
+    height:14px;
+    font-size:16px;
+    font-weight:bold;
+}
+.atkreport{
+    left:8px;
+}
+.defreport{
+    left:305px;
+}                        
+.report{
+    position:absolute;
+    font-size:11px;                          
+    top:35px;
+    width:260px;
+    height:86px;  
+    overflow:auto;
+    font-family:monospace;
+}
+

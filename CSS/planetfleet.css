@@ -1,0 +1,252 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 5:26:04 μμ
+    Author     : cdesp
+*/
+
+/*planetfleet.php */
+
+.planfleetscroll{
+    overflow: auto;     
+    height:490px;
+    top:0px;
+    left:0px;
+    width:417px;
+    position:absolute;
+}
+
+.planfleettit{
+    background-image: url('../Images/Planet_Ships_Title.png');   
+    width:417px;
+    height:35px;
+}  
+
+.planfleetship{
+    background-image: url('../Images/Planet_Ships.png');   
+    width:400px;
+    height:110px;   
+    left:0px;
+    position:absolute;
+}
+
+.psfimg{
+    left:5;
+    top:40px;
+    position:absolute;
+}
+
+.psfstitle{
+    left:113px;
+    top:4px;
+    width:270px;
+    position:absolute;  
+    font-size: 22px;
+    font-weight: bolder;
+    text-align:center;
+}
+
+.psfquant{
+    left:5px;
+    top:5px;
+    width:96px;
+    position:absolute;  
+    font-size: 22px;
+    font-weight: bolder;
+    text-align:right;     
+}
+
+.psfsprops{
+    left:115px;
+    top:37px;
+    width:120px;
+    height:70px;
+    position:absolute;  
+    font-size: 16px;
+    font-weight: bold;
+    text-align:right;     
+}
+
+.psfarmor{
+    left:50px;
+    top:6px;
+    width:45px;
+    height:20px;
+    position:absolute;       
+}
+
+.psfspeed{
+    left:50px;
+    top:27px;
+    width:45px;
+    height:20px;
+    position:absolute;            
+}
+
+.psfscan{
+    left:50px;
+    top:48px;
+    width:45px;
+    height:20px;
+    position:absolute;            
+}
+
+.stq{
+    top:71;  
+    left:267;
+    width:104;  
+    position:relative; 
+    text-align:right;
+    font-family:courier;
+    color:#3300CC;
+    font-size:20px;
+    font-weight:bold;
+}	
+
+.butcreatefleet{    
+    left:113px;
+    width:190px;
+    height:40px;
+    position:absolute;
+    top: 495px;
+}
+
+/*planetship.php */
+
+.planshipscroll{
+    position:absolute;
+    display:block;
+    overflow: auto;
+} 
+
+.planshiptit{
+    background-image: url('../Images/Planet_Build_Ships_Title.png');   
+    width:417px;
+    height:35px;
+}  
+
+.planshipbuilt{
+    background-image: url('../Images/Planet_Build_Ships.png');   
+    width:400px;
+    height:110px;   
+    left:0px;
+    position:absolute;
+}
+
+.pbsimg{
+    left:5;
+    top:40px;
+    position:absolute;
+}
+
+.pbsstitle{
+    left:10px;
+    top:4px;
+    width:195px;
+    position:absolute;  
+    font-size: 22px;
+    font-weight: bolder;
+    text-align:center;
+}
+
+.pbsarmor{
+    left:159px;
+    top:42px;
+    width:45px;
+    height:20px;
+    position:absolute;  
+    text-align:right;     
+}
+
+.pbsspeed{
+    left:159px;
+    top:63px;
+    width:45px;
+    height:20px;
+    position:absolute;            
+    text-align:right;     
+}
+
+.pbsscan{
+    left:159px;
+    top:84px;
+    width:45px;
+    height:20px;
+    position:absolute;    
+    text-align:right;     
+}
+
+.pbsgold{
+    left:243px;
+    top:42px;
+    width:86px;
+    height:18px;
+    position:absolute;  
+    text-align:right;     
+}
+
+.pbsmetal{
+    left:243px;
+    top:63px;
+    width:86px;
+    height:18px;
+    position:absolute;            
+    text-align:right;     
+}
+
+.pbstrit{
+    left:243px;
+    top:85px;
+    width:86px;
+    height:18px;
+    position:absolute;    
+    text-align:right;     
+}
+
+.pbstimes{
+    left:339px;
+    top:54px;
+    width:50px;
+    height:15px;
+    position:absolute;    
+    text-align:center;     
+}
+
+.pbstime{
+    left:339px;
+    top:67px;
+    width:50px;
+    height:15px;
+    position:absolute;    
+    text-align:right;     
+}
+
+.pbsquant{
+    left:270px;
+    top:20px;
+    width:56px;
+    height:16px;
+    position:absolute;    
+    text-align:right;               
+}
+
+.pbsquantmax{
+    left:333px;
+    top:20px;
+    width:56px;
+    height:16px;
+    position:absolute;    
+    text-align:right; 
+    font-size: 14px;
+}
+
+.pbsbutton{
+    left:340px;
+    top:74px;
+    width:50px;
+    height:20px;
+    position:absolute;         
+}

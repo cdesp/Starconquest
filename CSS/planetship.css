@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:36:42 μμ
+    Author     : cdesp
+*/
+
+/*getshipsforplanet*/
+.planship{
+    font-family:arial;color:white;font-size:12px;	 	  
+    position: absolute;
+    display: block;      	
+    left:0px;	
+    top:36px;
+    width: 417px;
+    height: 95%;
+    overflow:hidden;
+}

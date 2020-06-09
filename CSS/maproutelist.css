@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:13:17 μμ
+    Author     : cdesp
+*/
+
+/*getroutelist*/
+
+.divroute
+{
+    left:2px;
+    width:490px;
+    position:absolute;  
+}
+
+.rtfname
+{
+    font-family:arial;
+    color:#CDCD00;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    width:126px;
+    height:20px; 	        				
+    top:10px;
+    left:08px;
+    position:absolute;
+}		
+.rtcoords
+{
+    font-family:serif;
+    color:orange;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+    width:126px;
+    height:20px; 	        				
+    top:32px;
+    left:08px;
+    position:absolute;                         
+}
+.rtinfo
+{
+    top:0;
+    width:340px;
+    left:140px;
+    height:100%;
+    position:absolute;
+    font-family:arial;
+    color:yellow;
+    font-size:14px;	 	  
+}
+.rtinfo_speed
+{
+    top:10px;
+    left:10px;
+    position:absolute;
+}
+.rtinfo_eta
+{
+    top:10px;
+    left:150px;
+    position:absolute;                        
+}
+.rtinfo_duration
+{
+    top:28px;
+    left:10px;
+    position:absolute;                        
+}
+.rtmaintit
+{
+    left:0;
+    width:507px;
+    height:35px;
+    text-align:left;
+    position: absolute;
+    font-family:arial;
+    color:white;
+    font-size:20px;	
+    font-weight:bold; 
+    background-image:url('/Images/allroutelistheader.png');
+}
+.noofroutes
+{
+    left:24px;
+    top:6px;
+    position:absolute;
+}                  
+.divroutelist
+{
+    font-family:arial;
+    color:#8B3626;
+    font-size:12px;	 	  
+    position: absolute;
+    display: block;      	
+    left:0px;	
+    top:38px;
+    width: 511px;
+    height: 530px;
+    overflow:auto;
+}
+
+.stitle
+{
+    font-family:arial;
+    color:#0000FF;
+    font-size:16px;	
+    font-weight:bold; 	    
+}

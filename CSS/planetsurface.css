@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Ιουν 2020, 6:27:54 μμ
+    Author     : cdesp
+*/
+
+/*getplanetsurface */
+
+.planetclass  { 
+    display: block;
+    background-image: url('/Images/buildings/planet.png') ;
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 0px;
+    height: 500px; 
+    width: 600px; 
+} 
+.buildingtextclass  { 
+    display: block;
+    z-index: 12;		
+    position: absolute;
+    width: 120px;		
+    font-size:10px;
+    font-weight:bold;
+    background-color:#300000;
+    color:#FFCC33;
+    word-wrap: break-word;
+    text-align:center;
+
+
+}
