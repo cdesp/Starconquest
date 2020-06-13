@@ -154,7 +154,7 @@ function addfleetsonmap(&$jscr)
 
     if (myisset($qres)) {
         $reccnt = query_num_rows($qres);
-        adddebugval('reccnt', $reccnt);
+       // adddebugval('reccnt', $reccnt);
         if ($reccnt > 0) { //we have visible fleets
             for ($i = 0; $i < $reccnt; $i++) {
                 $dbarr = query_fetch_array($qres);
@@ -182,7 +182,7 @@ function addfleetsonmap(&$jscr)
     $ssx = $_SESSION['ssx'];
     $ssy = $_SESSION['ssy'];
     $userid = $_SESSION['id'];
-    adddebug("USERID=[$userid]<br>");
+    //adddebug("USERID=[$userid]<br>");
     $fleet_array = json_encode($fltarr);
     $jscr .= "
 				 var fleetarr = " . $fleet_array . ";\n  var selfleet=$selfleet;\n
@@ -192,7 +192,7 @@ function addfleetsonmap(&$jscr)
 				 var bgquadrh=$bgquadrh;var bgquadrv=$bgquadrv;
 				 var ssx=$ssx;var ssy=$ssy;var userid=$userid;
 				 ";
-    adddebug("add fleets OK<br>");
+    //adddebug("add fleets OK<br>");
 }
 
 function addplanets(&$jscr)
@@ -233,7 +233,7 @@ function addplanets(&$jscr)
 			   ";
 
     //adddebug($jscr)
-    adddebug("Add planets OK<br>");
+   // adddebug("Add planets OK<br>");
 }
 
 function addroutes(&$jscr)
@@ -260,7 +260,7 @@ function addroutes(&$jscr)
     } else {
         $selroute = 0;
     }
-    adddebugval('selroute', $selroute);
+    //adddebugval('selroute', $selroute);
     $jscr .= "" .
             " var routearr = " . $route_array . ";\n  " .
             " var wayparr = " . $wayp_array . ";\n  " .

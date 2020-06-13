@@ -525,7 +525,7 @@
         $qres=getalluserfleets(null, $tx*$solsyssize, $ty*$solsyssize, ++$bx*$solsyssize, ++$by*$solsyssize);
         if (myisset($qres)) {
             $reccnt=query_num_rows($qres);
-            adddebugval('reccnt', $reccnt);
+           // adddebugval('reccnt', $reccnt);
             if ($reccnt>0) { //we have visible fleets
                 for ($i=0;$i<$reccnt;$i++) {
                     $dbarr=query_fetch_array($qres);

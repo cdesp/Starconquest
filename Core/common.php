@@ -204,7 +204,7 @@ function includecorepage($page, $isajax = false)
         return false;
     } else {
         include_once $pgtoload;
-        adddebug("$pgtoload LOADED!<br>");
+       // adddebug("$pgtoload LOADED!<br>");
         //load css if exists
         if (!$isajax) {
             $predir = "CSS/";
@@ -218,7 +218,7 @@ function includecorepage($page, $isajax = false)
             $ifile = " <link type='text/css' rel='stylesheet' href='$csstoload' />";
             addincludefile($ifile); //check for  AJAX
         } else {
-            adddebug("CSS NOT LOADED=[$predir\\$page]<br>");
+          //  adddebug("CSS NOT LOADED=[$predir\\$page]<br>");
         }
         return true;
     }

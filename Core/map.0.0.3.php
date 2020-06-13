@@ -61,7 +61,7 @@ function mapinforequested($info)
             break;
 
         case 30:
-            adddebug('getmapdata');
+            //adddebug('getmapdata<br>');
             getmapdata($ajaxcode);
             break;
 
@@ -197,7 +197,7 @@ if (myisset(getsessionvar('action'))) {
 }
 $inpinfo=filter_input(INPUT_GET, 'info');
 if (myisset($inpinfo)) {
-    adddebug("mapinf<BR>");
+   // adddebug("mapinf<BR>");
     //$_SESSION['isajax']=true;
     mapinforequested($inpinfo);
     // $_SESSION['isajax']=false;

@@ -223,14 +223,12 @@
                     checkbackground();
             }
 
-            function selectPlanet(pid){
-                    //$('#planet_'+selplanet).css('background-color','".$bgcol1."');
+            function selectPlanet(pid){                   
                     $('#planet_'+selplanet).css('opacity','0.6');
                     setAjaxSessionParam('selplanet',pid);
                     selplanet=pid;
                     setAjaxSessionParam('action','planetcenter');
-                    refreshMap();
-                    //$('#planet_'+pid).css('background-color','".$bgcol2."');
+                    refreshMap();                   
                     $('#planet_'+pid).css('opacity','1.0');
                     //tabpressed(null,selectedTab);//reload tab
             }
